@@ -1,0 +1,12 @@
+.box {
+  margin: auto;
+  width: 100px;
+  height: 100px;
+  padding: 10px;
+  border: 5px groove black;
+  float: left;
+  justify-content: center;
+}
+.titleproduct {
+  font-size: large;
+}
