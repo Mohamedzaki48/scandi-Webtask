@@ -41,14 +41,16 @@ public function getType(){
 public abstract function saveProduct($data);
 
 
-// public function getAllProducts($what){
-//   $sql = "SELECT * FROM items";
-//   $result = $what->query($sql);
-//   if(!$result){
-//     die("Error: " .$result->connect_error);
-//   }
-//   return $result;
-//  }
+public function getAllProducts($what){
+$what = $this->connect();
+
+  $sql = "SELECT * FROM items";
+  $result = $what->query($sql);
+  if(!$result){
+    die("Error: " .$result->connect_error);
+  }
+  return $result;
+ }
 
 
  }

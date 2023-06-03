@@ -18,6 +18,8 @@
             <span>MASS Delete</span>
           </button>
         </form>
-    <?php include 'ProductsListViewing.php'?>
+     <button id="btnadd">Add</button>
+    <script type = "module" src="list.js"></script>
+
   </body>
 </html>

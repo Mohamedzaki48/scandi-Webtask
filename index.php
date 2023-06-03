@@ -56,8 +56,9 @@
     </div>
   </div>
  
-  <button type="submit" class="btnsave">Add</button>
+  <button type="submit" id="btnsave">Add</button>
 </form>
+<button id="btncancel">Cancel</button>
 <script type = "module" src="script.js"></script>
 </body>
 </html>

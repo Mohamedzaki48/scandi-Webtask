@@ -29,10 +29,7 @@
   border: 1px solid #bebebe;
   padding: 7px;
   margin: 0px;
-  -webkit-transition: all 0.3s ease-in-out;
-  -moz-transition: all 0.3s ease-in-out;
-  -ms-transition: all 0.3s ease-in-out;
-  -o-transition: all 0.3s ease-in-out;
+
   outline: none;
 }
 .sizebox {
@@ -55,66 +52,45 @@
   justify-content: center;
   display: none;
 }
-.btnsave {
-  user-select: none;
-  transition: background 20ms ease-in 0s;
-  cursor: pointer;
-  display: inline-flex;
-  align-items: center;
-  flex-shrink: 0;
-  white-space: nowrap;
-  height: 28px;
-  border-radius: 4px;
-  font-size: 14px;
-  line-height: 1.2;
-  min-width: 0px;
-  padding-left: 8px;
-  padding-right: 8px;
-  top: 0;
-  right: 0;
-  color: rgb(55, 53, 47);
-}
-.btnsave {
-  appearance: button;
-  background-color: #1652f0;
-  border: 1px solid #1652f0;
-  border-radius: 4px;
-  box-sizing: border-box;
-  color: #ffffff;
-  cursor: pointer;
 
-  font-family: Graphik, -apple-system, system-ui, "Segoe UI", Roboto, Oxygen,
-    Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
-  font-size: 14px;
-  line-height: 1.15;
-  overflow: visible;
-  padding: 12px 16px;
-  position: absolute;
-  text-align: center;
-  text-transform: none;
-  transition: all 80ms ease-in-out;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
-  width: fit-content;
-}
-
-/* CSS */
-
-.btnsave:disabled {
-  opacity: 0.5;
-}
-
-.btnsave:focus {
+#btnsave {
+  border: 0;
   outline: 0;
+  position: absolute;
+  cursor: pointer;
+  color: white;
+  background-color: rgb(84, 105, 212);
+
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 4px 8px;
+  display: inline-flex;
+  min-height: 28px;
+  transition: background-color 0.24s, box-shadow 0.24s;
+  right: 80px;
+  top: 20px;
+
+  float: right;
 }
 
-.btnsave:hover {
-  background-color: #0a46e4;
-  border-color: #0a46e4;
-}
+#btncancel {
+  border: 0;
+  outline: 0;
+  position: absolute;
+  cursor: pointer;
+  color: white;
+  background-color: rgb(84, 105, 212);
 
-.btnsave:active {
-  background-color: #0039d7;
-  border-color: #0039d7;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 4px 8px;
+  display: inline-flex;
+  min-height: 28px;
+  transition: background-color 0.24s, box-shadow 0.24s;
+  right: 10px;
+  top: 20px;
+
+  float: right;
 }

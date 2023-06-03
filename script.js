@@ -7,7 +7,6 @@ const bookweightbox = document.querySelector(".weightbox");
 const furniturebox = document.querySelector(".dimensionsbox");
 const discbox = document.querySelector(".sizebox");
 const allboxes = document.querySelector(".boxes");
-
 const select = document.getElementById("productType");
 const adding = document.getElementById("product_form");
 const sku = document.getElementById("sku");
@@ -19,10 +18,8 @@ const weight = document.getElementById("weight");
 const height = document.getElementById("height");
 const width = document.getElementById("width");
 const length = document.getElementById("length");
+const cancel = document.getElementById("btncancel");
 
-//const btnSort = document.querySelector(".btn--sort");
-
-// en
 select.addEventListener("change", function () {
   let value = select.options[select.selectedIndex].value;
   if (value === "Book") {
@@ -115,4 +112,9 @@ adding.addEventListener("submit", function (e) {
     }
   }
   helper.saveProduct(sku.value, name.value, price.value, myvalue, spec);
+});
+
+
+cancel.addEventListener("click", function () {
+  location.replace("./index2.php");
 });
