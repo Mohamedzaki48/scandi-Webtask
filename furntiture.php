@@ -58,4 +58,18 @@ class Furniture extends Product{
     
         
     }
+
+
+    public function getAllProducts(){
+        $conn = $this->connect();
+        $sql = "SELECT sku,name,price,type,height,width,length FROM items WHERE type ='furniture'"; // SQL with parameters
+        $stmt = $conn->prepare($sql); 
+        $stmt->execute();
+        $result = $stmt->get_result(); // get the mysqli result
+       // $user = $result->fetch_assoc(); //
+      // $data = $result->fetch_all(MYSQLI_ASSOC);
+          return $result;
+         }
+
+         
 }

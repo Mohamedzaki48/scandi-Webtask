@@ -8,6 +8,6 @@ addbtn.addEventListener("click", function () {
 });
 
 window.addEventListener("load", (event) => {
-  console.log("sdabasd");
+  // console.log("sdabasd");
   helper.getProducts();
 });

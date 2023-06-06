@@ -1,5 +1,6 @@
 <?php include "model-helpers.php" ;
-include "controller-helper.php"
+include "controller-helper.php";
+include_once "product.php"
 ?>
 <?php
   ini_set('display_errors',1); 
@@ -8,7 +9,14 @@ class Controller{
 
 
  
+public function getProducts(){
+  $res = new ControllerHelper();
+  $result = $res->retProducts();
+  
+  
+  return $result;
 
+}
 
 
 public function saveProduct($data){

@@ -11,11 +11,13 @@
   <body>
   <div class="container">
     
-      <header class="header">
-      <strong class = "titleproduct">Products List</strong>
-        <form class="delete">
-          <button id="delete-product-btn">
-            <span>MASS Delete</span>
+      <!-- <header class="header"> -->
+      <!-- //<strong class = "titleproduct">Products List</strong> -->
+      <h1>Products List </h1>
+        <form id="delete">
+          
+            <button type="submit" id="delete-product-btn">MASS Delete</button>
+
           </button>
         </form>
      <button id="btnadd">Add</button>

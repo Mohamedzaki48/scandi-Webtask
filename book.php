@@ -6,7 +6,7 @@ require_once("dbh.php")
  error_reporting(E_ALL);
 class Book extends Product{
 private $weight;
-
+public $ret = [];
 
 public function setWeight($weight){
     $this->weight = $weight;
@@ -41,4 +41,18 @@ public function saveProduct($data)
 
     
 }
+
+
+public function getAllProducts(){
+    $conn = $this->connect();
+    $sql = "SELECT sku,name,price,type,weight FROM items WHERE type ='book'"; // SQL with parameters
+    $stmt = $conn->prepare($sql); 
+    $stmt->execute();
+    $result = $stmt->get_result(); // get the mysqli result
+   // $user = $result->fetch_assoc(); //
+//    while ($row = $result->fetch_assoc()) {
+//     $this->ret
+
+      return $result;
+     }
 }

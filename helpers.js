@@ -1,4 +1,6 @@
 //Validate name field characters
+const addbtn = document.getElementById("btnadd");
+
 export const validateName = function (name) {
   let letters = /^[A-Za-z]+$/;
   if (name.match(letters)) {
@@ -59,21 +61,10 @@ export const getProducts = function () {
   //👇 what to do when you receive a response
   xhl.onreadystatechange = function () {
     if (xhl.readyState == XMLHttpRequest.DONE) {
-      console.log(xhl.responseText);
+      addbtn.insertAdjacentHTML("afterend", xhl.responseText);
     }
   };
 
   //👇 send the data
   xhl.send();
 };
-
-//   var xmlhttp = new XMLHttpRequest();
-//   const str = "products";
-//   xmlhttp.open("GET", "gethint.php?q" + str, true);
-//   xmlhttp.onreadystatechange = function () {
-//     if (this.readyState == 4 && this.status == 200) {
-//       console.log(xmlhttp.responseText);
-//     }
-//   };
-//   xmlhttp.send();
-// };
