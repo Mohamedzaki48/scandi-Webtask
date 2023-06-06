@@ -50,4 +50,19 @@ public function deleteProducts($sku){
     $stmt->execute();
      $stmt->close();
 }
+
+public function checkSku($sku){
+    $what = $this->connect();
+         $sql = "SELECT * FROM items WHERE sku = '$sku'";
+        $result=mysqli_query($what,$sql);
+
+
+        if ( mysqli_num_rows($result)===0)
+        {
+      
+        mysqli_free_result($result);
+        return 1;
+        } else return 0;
+
+}
 }

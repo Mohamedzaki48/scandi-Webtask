@@ -1,4 +1,4 @@
-<?php include "model-helpers.php" ;
+<?php 
 include "controller-helper.php";
 include_once "product.php"
 ?>
@@ -18,14 +18,13 @@ public function getProducts(){
 
 
 public function saveProduct($data){
-  $modelhelp = new ModelHelper();
-  $ret = $modelhelp->checkSku($data["sku"]);
    $controlhelp = new ControllerHelper();
-    if($ret === 1){
-      $mod = $controlhelp->checkType($data["type"]);
+   $mod = $controlhelp->checkType($data["type"]);
+   $ret = $mod->saveProduct($data);
+  
 
-      $mod->saveProduct($data);
-      return true;
+    if($ret === 1){
+   return true;
   }else{ return false;}
 
 }

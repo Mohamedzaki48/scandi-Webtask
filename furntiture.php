@@ -29,6 +29,9 @@ class Furniture extends Product{
     public function saveProduct($data)
     {
         $this->setSku($data["sku"]);
+
+    $checkprod = $this->checkSku($this->getSku());
+if($checkprod === 1){
         $this->setName($data["name"]);
         $this->setPrice($data["price"]);
         $this ->setType($data["type"]);
@@ -52,6 +55,8 @@ class Furniture extends Product{
         $stmt->bind_param("sssiiii",$newSku,$newName,$newType,$newHeight,$newWidth,$newLength,$newPrice);
         $stmt->execute();
          $stmt->close();
+        return 1;
+    } else return 0;
        //$result=mysqli_query($what,$sql);
     
     

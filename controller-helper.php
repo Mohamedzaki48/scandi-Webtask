@@ -12,20 +12,10 @@ class ControllerHelper{
 
    }
    public function retProducts(){
-       //$result;
       foreach ($this->types as $key => $value) {
-         
-        $obj =  new $value();
+         $obj =  new $value();
         $result = $obj->getAllProducts();
-       // $this->ret[] = $result; 
        array_push($this->ret, $result);
-      //   while($row = $result -> fetch_assoc())
-      //   {
-      //     $this->ret[]=$row;
-      //   }
-        
-        
-        
        }
        return $this->ret;  
         

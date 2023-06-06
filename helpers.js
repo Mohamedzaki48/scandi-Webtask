@@ -38,7 +38,11 @@ export const saveProduct = function (sku, name, price, type, spec) {
   //👇 what to do when you receive a response
   xhr.onreadystatechange = function () {
     if (xhr.readyState == XMLHttpRequest.DONE) {
-      let res = xhr.responseText.charAt(2);
+      //console.log(xhr.responseText.indexOf(0));
+
+      let res = xhr.responseText.charAt(1);
+      //console.log(res);
+
       if (res === "1") {
         // location.reload();
         location.replace("./index2.php");

@@ -15,8 +15,10 @@ public function getSize() {
 
 public function saveProduct($data)
 {
-    //printf($data['name']);
     $this->setSku($data["sku"]);
+
+    $checkprod = $this->checkSku($this->getSku());
+if($checkprod === 1){
     $this->setName($data["name"]);
     $this->setPrice($data["price"]);
     $this ->setType($data["type"]);
@@ -34,6 +36,8 @@ public function saveProduct($data)
     $stmt->bind_param("sssii",$newSku,$newName,$newType,$newSize,$newPrice);
     $stmt->execute();
      $stmt->close();
+    return 1;
+}else return 0;
  
 }
 

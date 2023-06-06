@@ -16,8 +16,10 @@ public function getWeight() {
 }
 
 public function saveProduct($data)
-{
-    $this->setSku($data["sku"]);
+{    $this->setSku($data["sku"]);
+
+    $checkprod = $this->checkSku($this->getSku());
+if($checkprod === 1){
     $this->setName($data["name"]);
     $this->setPrice($data["price"]);
     $this ->setType($data["type"]);
@@ -35,8 +37,10 @@ public function saveProduct($data)
     $stmt->bind_param("sssii",$newSku,$newName,$newType,$newWeight,$newPrice);
     $stmt->execute();
      $stmt->close();
-   //$result=mysqli_query($what,$sql);
-
+     return 1;
+}else{
+    return 0;
+}
 
 
     
@@ -48,8 +52,8 @@ public function getAllProducts(){
     $sql = "SELECT sku,name,price,type,weight FROM items WHERE type ='book'"; // SQL with parameters
     $stmt = $conn->prepare($sql); 
     $stmt->execute();
-    $result = $stmt->get_result(); // get the mysqli result
-   // $user = $result->fetch_assoc(); //
+    $result = $stmt->get_result(); 
+ 
    while ($row = $result->fetch_assoc()) {
     $stat= "<div class='box'> <input type='checkbox' form='delete' class='delete-checkbox' name='scales' value ='{$row["sku"]}' >
     <br> 
