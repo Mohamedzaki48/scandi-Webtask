@@ -1,6 +1,6 @@
 <?php 
 include "controller-helper.php";
-include_once "product.php"
+include_once "./model/product.php"
 ?>
 <?php
   ini_set('display_errors',1); 

@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
    
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href = "addProductstyle.css" rel="stylesheet"/>
+    <link href = "View/addProductstyle.css" rel="stylesheet"/>
 
     <title>Document</title>
 </head>
@@ -59,6 +59,6 @@
   <button type="submit" id="btnsave">Add</button>
 </form>
 <button id="btncancel">Cancel</button>
-<script type = "module" src="script.js"></script>
+<script type = "module" src="View/script.js"></script>
 </body>
 </html>

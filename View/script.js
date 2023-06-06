@@ -114,7 +114,6 @@ adding.addEventListener("submit", function (e) {
   helper.saveProduct(sku.value, name.value, price.value, myvalue, spec);
 });
 
-
 cancel.addEventListener("click", function () {
   location.replace("./index2.php");
 });

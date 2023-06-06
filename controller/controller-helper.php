@@ -1,6 +1,6 @@
-<?php include "disc.php";
-include "book.php";
-include "furntiture.php"?>
+<?php include "./model/disc.php";
+include "./model/book.php";
+include "./model/furntiture.php"?>
 <?php  
  ini_set('display_errors',1); 
  error_reporting(E_ALL);

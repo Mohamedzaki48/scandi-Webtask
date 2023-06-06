@@ -1,4 +1,4 @@
-<?php include "controller.php";
+<?php include "controller/controller.php";
 ?>
 
 <?php
