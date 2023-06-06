@@ -6,7 +6,7 @@ class Furniture extends Product{
     private $height;
     private $width;
     private $length;
-
+ public $ret = [];
     public function setHeight($height){
         $this->height = $height;
     }
@@ -68,7 +68,14 @@ class Furniture extends Product{
         $result = $stmt->get_result(); // get the mysqli result
        // $user = $result->fetch_assoc(); //
       // $data = $result->fetch_all(MYSQLI_ASSOC);
-          return $result;
+      while ($row = $result->fetch_assoc()) {
+        $stat= "<div class='box'> <input type='checkbox' form='delete' class='delete-checkbox' name='scales' value ='{$row["sku"]}' >
+        <br> 
+        <label id = 'product-info' for='delete-checkbox'>{$row["sku"]}<br>{$row["name"]}<br>{$row["price"]} $ <br> Dimensions: {$row["height"]}x{$row["width"]}x{$row["length"]} </label>
+        </div>";
+array_push($this->ret,$stat);
+    }
+    return $this->ret;
          }
 
          

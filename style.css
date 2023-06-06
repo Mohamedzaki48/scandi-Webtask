@@ -3,7 +3,7 @@
   width: 130px;
   height: 130px;
   padding: 10px;
-
+  text-align: center;
   border: 2px groove rgb(7, 8, 8);
   float: left;
   justify-content: center;
@@ -58,4 +58,5 @@
   display: inline-block;
   text-align: right;
   float: left;
+  vertical-align: middle;
 }

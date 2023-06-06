@@ -2,6 +2,7 @@
 <?php 
  ini_set('display_errors',1); 
  error_reporting(E_ALL);
+ 
   abstract class Product extends Dbh{
     private $sku;
     private $name;
@@ -42,5 +43,11 @@ public abstract function saveProduct($data);
 
 public abstract function getAllProducts();
 
-
- }
+public function deleteProducts($sku){
+    $what = $this->connect();
+    $stmt = $what->prepare("DELETE FROM items WHERE SKU = ? ");
+    $stmt->bind_param("s",$sku);
+    $stmt->execute();
+     $stmt->close();
+}
+}

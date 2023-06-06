@@ -21,6 +21,8 @@ class ModelHelper extends Dbh{
         } else return 0;
 }
 
-    
+    // public function deleteProducts($data){
+    //     $this->setSku($data["sku"]);
+    // }
 
 }

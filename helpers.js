@@ -61,10 +61,31 @@ export const getProducts = function () {
   //👇 what to do when you receive a response
   xhl.onreadystatechange = function () {
     if (xhl.readyState == XMLHttpRequest.DONE) {
+      console.log(xhl.responseText);
+
       addbtn.insertAdjacentHTML("afterend", xhl.responseText);
     }
   };
 
   //👇 send the data
   xhl.send();
+};
+
+export const deleteProducts = function (products) {
+  var xhl = new XMLHttpRequest();
+
+  xhl.open("DELETE", "handler.php", true);
+  xhl.setRequestHeader("Content-Type", "application/json");
+
+  //👇 what to do when you receive a response
+  xhl.onreadystatechange = function () {
+    if (xhl.readyState == XMLHttpRequest.DONE) {
+      location.replace("./index2.php");
+      //location.reload();
+      console.log(xhl.responseText);
+    }
+  };
+
+  //👇 send the data
+  xhl.send(JSON.stringify(products));
 };

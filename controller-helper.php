@@ -17,11 +17,12 @@ class ControllerHelper{
          
         $obj =  new $value();
         $result = $obj->getAllProducts();
-        
-        while($row = $result -> fetch_assoc())
-        {
-          $this->ret[]=$row;
-        }
+       // $this->ret[] = $result; 
+       array_push($this->ret, $result);
+      //   while($row = $result -> fetch_assoc())
+      //   {
+      //     $this->ret[]=$row;
+      //   }
         
         
         
