@@ -14,7 +14,6 @@ if ($conn->connect_error) {
     echo "no connection";
   die("Connection failed: " . $conn->connect_error);
 }
-//echo("EL denia shghala");
 return $conn;
     }
     

@@ -41,7 +41,7 @@ select.addEventListener("change", function () {
     furniturebox.style.display = "block";
     furniturebox.style.position = "absolute";
   }
-  if (value === "Disc") {
+  if (value === "DVD") {
     bookweightbox.style.display = "none";
     weight.value = "";
     height.value = "";
@@ -91,7 +91,7 @@ adding.addEventListener("submit", function (e) {
     }
   }
 
-  if (myvalue === "Disc") {
+  if (myvalue === "DVD") {
     if (helper.isNumber(size.value)) spec.push(size.value);
     else {
       alert("Please add numeric values in the Size Field ");

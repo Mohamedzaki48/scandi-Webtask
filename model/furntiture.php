@@ -57,7 +57,6 @@ if($checkprod === 1){
          $stmt->close();
         return 1;
     } else return 0;
-       //$result=mysqli_query($what,$sql);
     
     
     
@@ -71,8 +70,6 @@ if($checkprod === 1){
         $stmt = $conn->prepare($sql); 
         $stmt->execute();
         $result = $stmt->get_result(); // get the mysqli result
-       // $user = $result->fetch_assoc(); //
-      // $data = $result->fetch_all(MYSQLI_ASSOC);
       while ($row = $result->fetch_assoc()) {
         $stat= "<div class='box'> <input type='checkbox' form='delete' class='delete-checkbox' name='scales' value ='{$row["sku"]}' >
         <br> 

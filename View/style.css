@@ -1,15 +1,25 @@
 .box {
   margin: 10px;
-  width: 130px;
-  height: 130px;
+  width: 290px;
+  height: 170px;
   padding: 10px;
-  text-align: center;
+
+  /* text-align: ; */
   border: 2px groove rgb(7, 8, 8);
   float: left;
   justify-content: center;
 }
-.titleproduct {
-  font-size: large;
+#listtitle {
+  font-size: 40px;
+  font-weight: 400;
+  color: #070707;
+  margin: 10px 10px 10px 10px;
+}
+#listtitle::after {
+  display: block;
+  content: "";
+  margin-top: 10px;
+  border-bottom: 1px solid #000;
 }
 
 #btnadd {
@@ -56,7 +66,23 @@
 
 #product-info {
   display: inline-block;
-  text-align: right;
+  text-align: center;
   float: left;
+  font-size: large;
   vertical-align: middle;
+  padding: 10px 70px 20px;
+}
+
+.delete-checkbox {
+  width: 17px;
+  height: 17px;
+  padding: 0;
+  margin: 0;
+  vertical-align: bottom;
+  position: relative;
+  top: -1px;
+  *overflow: hidden;
+  float: left;
+  right: -5px;
+  top: 5px;
 }

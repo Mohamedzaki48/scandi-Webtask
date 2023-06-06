@@ -1,7 +1,7 @@
 <?php require_once "product.php";
 require_once "dbh.php"?>
 <?php 
-class Disc extends Product{
+class DVD extends Product{
     private $size;
     public $ret =[];
 
@@ -44,14 +44,14 @@ if($checkprod === 1){
 
 public function getAllProducts(){
     $conn = $this->connect();
-    $sql = "SELECT sku,name,price,type,size FROM items WHERE type ='disc'"; // SQL with parameters
+    $sql = "SELECT sku,name,price,type,size FROM items WHERE type ='DVD'"; // SQL with parameters
     $stmt = $conn->prepare($sql); 
     $stmt->execute();
     $result = $stmt->get_result(); // get the mysqli result
    // $user = $result->fetch_assoc(); //
 //    $data = $result->fetch_all(MYSQLI_ASSOC);
 while ($row = $result->fetch_assoc()) {
-    $stat= "<div class='box'> <input type='checkbox' form='delete' class='delete-checkbox' name='scales' value ='{$row["sku"]}' >
+    $stat= "<div class='box'> <input type='checkbox' form='delete' class='delete-checkbox' name='scales' value ='{$row["sku"]}' >  
     <br> 
     <label id = 'product-info' for='delete-checkbox'>{$row["sku"]}<br>{$row["name"]}<br>{$row["price"]} $<br> Size: {$row["size"]} MB </label>
     </div>";
