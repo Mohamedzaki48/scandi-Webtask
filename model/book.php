@@ -1,5 +1,5 @@
 <?php include_once ("product.php");
-require_once("./dbh.php")
+require_once("dbh.php")
 ?>
 <?php 
  ini_set('display_errors',1); 

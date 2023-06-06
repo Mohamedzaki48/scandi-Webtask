@@ -1,5 +1,5 @@
 <?php require_once "product.php";
-require_once "./dbh.php"
+require_once "dbh.php"
 ?>
 <?php 
 class Furniture extends Product{
