@@ -38,14 +38,11 @@ export const saveProduct = function (sku, name, price, type, spec) {
   //👇 what to do when you receive a response
   xhr.onreadystatechange = function () {
     if (xhr.readyState == XMLHttpRequest.DONE) {
-      //console.log(xhr.responseText.indexOf(0));
+      let res = xhr.responseText.includes("1");
 
-      let res = xhr.responseText.charAt(1);
-      //console.log(res);
-
-      if (res === "1") {
+      if (res) {
         // location.reload();
-        location.replace("./index2.php");
+        location.replace("./index.php");
       } else {
         alert("can't add product,Product Sku Already Exists");
       }
@@ -84,7 +81,7 @@ export const deleteProducts = function (products) {
   //👇 what to do when you receive a response
   xhl.onreadystatechange = function () {
     if (xhl.readyState == XMLHttpRequest.DONE) {
-      location.replace("./index2.php");
+      location.replace("./index.php");
       //location.reload();
       console.log(xhl.responseText);
     }

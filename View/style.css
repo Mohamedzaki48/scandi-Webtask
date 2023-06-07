@@ -67,8 +67,8 @@
 #product-info {
   display: inline-block;
   text-align: center;
-  float: left;
-  font-size: large;
+  /* float: left; */
+  font-size: larger;
   vertical-align: middle;
   padding: 10px 70px 20px;
 }

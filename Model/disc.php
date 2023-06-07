@@ -1,6 +1,7 @@
-<?php require_once "product.php";
-require_once "dbh.php"?>
 <?php 
+require_once "product.php";
+require_once "dbh.php"; 
+
 class DVD extends Product{
     private $size;
     public $ret =[];

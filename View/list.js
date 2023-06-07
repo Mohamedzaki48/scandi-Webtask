@@ -5,11 +5,13 @@ const addbtn = document.getElementById("btnadd");
 const deletebtn = document.getElementById("delete-product-btn");
 const checkboxes = document.getElementsByClassName("delete-checkbox");
 const remove = document.getElementById("delete");
+
 addbtn.addEventListener("click", function () {
-  location.replace("./index.php");
+  window.location.replace("./index2.php");
 });
 
 window.addEventListener("load", (event) => {
+  event.preventDefault();
   helper.getProducts();
 });
 

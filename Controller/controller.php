@@ -1,8 +1,8 @@
-<?php 
-include "controller-helper.php";
-include_once "./model/product.php"
-?>
 <?php
+
+ require_once "controller-helper.php";
+ //require_once "./model/product.php";
+
   ini_set('display_errors',1); 
  error_reporting(E_ALL);
 class Controller{

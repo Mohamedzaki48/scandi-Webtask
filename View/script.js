@@ -115,5 +115,5 @@ adding.addEventListener("submit", function (e) {
 });
 
 cancel.addEventListener("click", function () {
-  location.replace("./index2.php");
+  location.replace("./index.php");
 });

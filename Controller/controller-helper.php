@@ -1,14 +1,17 @@
-<?php include "./model/disc.php";
-include "./model/book.php";
-include "./model/furntiture.php"?>
 <?php  
+
+
+require_once "./Model/disc.php";
+require_once "./Model/book.php";
+require_once "./Model/furntiture.php";
+
  ini_set('display_errors',1); 
  error_reporting(E_ALL);
 class ControllerHelper{
    public $types = array("Furniture"=>"Furniture", "DVD"=>"DVD", "Book"=>"Book");
    public $ret = [];
    public function checkType($type){
-    return new $this->types[$type]();
+    return new  $this->types[$type]();
 
    }
    public function retProducts(){

@@ -1,8 +1,8 @@
-<?php require_once("dbh.php");?>
 <?php 
+ require_once("dbh.php");
  ini_set('display_errors',1); 
  error_reporting(E_ALL);
- 
+
   abstract class Product extends Dbh{
     private $sku;
     private $name;

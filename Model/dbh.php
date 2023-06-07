@@ -1,4 +1,5 @@
 <?php 
+
 class Dbh{
 private $servername = "localhost";
 private $username = "root";
@@ -8,7 +9,7 @@ private $dbname = "Products";
  public function connect(){
 
 
-$conn = new mysqli($this->servername, $this->username,$this->password,$this->dbname);
+$conn = new \mysqli($this->servername, $this->username,$this->password,$this->dbname);
 // Check connection
 if ($conn->connect_error) {
     echo "no connection";

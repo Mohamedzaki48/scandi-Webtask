@@ -1,7 +1,6 @@
-<?php include "controller/controller.php";
-?>
-
 <?php
+
+require_once "Controller/controller.php";
  ini_set('display_errors',1); 
  error_reporting(E_ALL);
  $check = new Controller();

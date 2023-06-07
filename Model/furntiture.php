@@ -1,7 +1,7 @@
-<?php require_once "product.php";
-require_once "dbh.php"
-?>
 <?php 
+require_once "product.php";
+require_once "dbh.php";
+
 class Furniture extends Product{
     private $height;
     private $width;
