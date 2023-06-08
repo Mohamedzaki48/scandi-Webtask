@@ -1,6 +1,8 @@
 <?php
-
- require_once "controller-helper.php";
+namespace application\Controller;
+use application\Model as Model;
+require_once './autoloader.php';
+//  require_once "Helper.php";
  //require_once "./model/product.php";
 
   ini_set('display_errors',1); 
@@ -10,7 +12,7 @@ class Controller{
 
  
 public function getProducts(){
-  $res = new ControllerHelper();
+  $res = new Helper();
   $result = $res->retProducts();
   return $result;
 
@@ -18,7 +20,7 @@ public function getProducts(){
 
 
 public function saveProduct($data){
-   $controlhelp = new ControllerHelper();
+   $controlhelp = new Helper();
    $mod = $controlhelp->checkType($data["type"]);
    $ret = $mod->saveProduct($data);
   
@@ -30,7 +32,7 @@ public function saveProduct($data){
 }
 
 public function deleteProducts($data){
-  $prod = new Book();
+  $prod = new Model\Book();
   for($i=0;$i<count($data);$i++){
     $prod->setSku($data[$i]);
     $prod->deleteProducts($prod->getSku());

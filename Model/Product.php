@@ -1,5 +1,8 @@
 <?php 
- require_once("dbh.php");
+namespace application\Model;
+require_once './autoloader.php';
+
+//  require_once("Dbh.php");
  ini_set('display_errors',1); 
  error_reporting(E_ALL);
 

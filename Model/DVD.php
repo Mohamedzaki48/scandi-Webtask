@@ -1,6 +1,9 @@
 <?php 
-require_once "product.php";
-require_once "dbh.php"; 
+namespace application\Model;
+require_once './autoloader.php';
+
+// require_once "Product.php";
+// require_once "Dbh.php"; 
 
 class DVD extends Product{
     private $size;

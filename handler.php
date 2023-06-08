@@ -1,9 +1,13 @@
 <?php
+require_once 'autoloader.php';
 
-require_once "Controller/controller.php";
+use application\Controller as controller;
+
+// require_once "Controller/Controller.php";
+
  ini_set('display_errors',1); 
  error_reporting(E_ALL);
- $check = new Controller();
+ $check = new controller\Controller();
 if($_SERVER["REQUEST_METHOD"] == "POST"){
 $data = json_decode(file_get_contents("php://input"), true);
 

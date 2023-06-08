@@ -1,4 +1,5 @@
 <?php 
+namespace application\Model;
 
 class Dbh{
 private $servername = "localhost";

@@ -1,6 +1,9 @@
-<?php 
-require_once "product.php";
-require_once "dbh.php";
+<?php
+namespace application\Model;
+require_once './autoloader.php';
+
+// require_once "Product.php";
+// require_once "Dbh.php";
 
 class Furniture extends Product{
     private $height;
@@ -73,7 +76,7 @@ if($checkprod === 1){
       while ($row = $result->fetch_assoc()) {
         $stat= "<div class='box'> <input type='checkbox' form='delete' class='delete-checkbox' name='scales' value ='{$row["sku"]}' >
         <br> 
-        <label id = 'product-info' for='delete-checkbox'>{$row["sku"]}<br>{$row["name"]}<br>{$row["price"]} $ <br> Dimensions: {$row["height"]}x{$row["width"]}x{$row["length"]} </label>
+        <label id = 'product-info' for='delete-checkbox'>{$row["sku"]}<br>{$row["name"]}<br>{$row["price"]} $<br>Dimensions: {$row["height"]}x{$row["width"]}x{$row["length"]} </label>
         </div>";
 array_push($this->ret,$stat);
     }
