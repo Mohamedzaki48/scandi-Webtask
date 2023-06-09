@@ -73,12 +73,10 @@ adding.addEventListener("submit", function (e) {
     return;
   }
 
-  if (!helper.validateName(name.value)) {
-    alert("Please input alphabet characters only in name ");
-    return;
-  }
   if (!helper.isNumber(price.value)) {
-    alert("Please input number only in price and Type specification fields");
+    alert(
+      "Please input numeric values only in price and Type specification fields"
+    );
     return;
   }
 

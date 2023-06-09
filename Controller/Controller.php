@@ -2,8 +2,7 @@
 namespace application\Controller;
 use application\Model as Model;
 require_once './autoloader.php';
-//  require_once "Helper.php";
- //require_once "./model/product.php";
+
 
   ini_set('display_errors',1); 
  error_reporting(E_ALL);

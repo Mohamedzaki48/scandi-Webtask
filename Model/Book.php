@@ -2,8 +2,6 @@
 namespace application\Model;
 require_once './autoloader.php';
 
-// require_once "Product.php";
-// require_once "Dbh.php";
 
  ini_set('display_errors',1); 
  error_reporting(E_ALL);

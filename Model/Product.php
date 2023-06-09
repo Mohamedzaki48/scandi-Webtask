@@ -2,7 +2,6 @@
 namespace application\Model;
 require_once './autoloader.php';
 
-//  require_once("Dbh.php");
  ini_set('display_errors',1); 
  error_reporting(E_ALL);
 
@@ -56,6 +55,7 @@ public function deleteProducts($sku){
 
 public function checkSku($sku){
     $what = $this->connect();
+    
          $sql = "SELECT * FROM items WHERE sku = '$sku'";
         $result=mysqli_query($what,$sql);
 
