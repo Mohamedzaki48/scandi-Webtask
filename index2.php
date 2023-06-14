@@ -56,7 +56,7 @@
     </div>
   </div>
  
-  <button type="submit" id="btnsave">Add</button>
+  <button type="submit" id="btnsave">Save</button>
 </form>
 <button id="btncancel">Cancel</button>
 <script type = "module" src="View/script.js"></script>

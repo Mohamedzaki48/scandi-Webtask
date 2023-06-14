@@ -15,11 +15,11 @@
       <h1 id="listtitle">Products List </h1>
         <form id="delete">
           
-            <button type="submit" id="delete-product-btn">MASS Delete</button>
+            <button type="submit" id="delete-product-btn">MASS DELETE</button>
 
           </button>
         </form>
-     <button id="btnadd">Add</button>
+     <button id="btnadd">ADD</button>
     <script type = "module" src="View/list.js"></script>
 
   </body>
