@@ -1,11 +1,10 @@
 <?php 
 namespace application\Model;
 require_once './autoloader.php';
+ini_set('display_errors',1); 
+error_reporting(E_ALL);
 
- ini_set('display_errors',1); 
- error_reporting(E_ALL);
-
-  abstract class Product extends Dbh
+abstract class Product extends Dbh
   {
     private $sku;
     private $name;
@@ -16,18 +15,22 @@ require_once './autoloader.php';
     {
         $this->price = $price;
     }
+
     public function setName($name)
     {
         $this->name = $name;
     }
+
     public function setType($type)
     {
         $this->type = $type;
     }
+
     public function setSku($sku)
     {
         $this->sku = $sku;
     }
+
     public function getSku() 
     {
         return $this->sku;
@@ -36,18 +39,22 @@ require_once './autoloader.php';
     public function getPrice()
     {
         return $this->price;
-    }   
+    }
+
     public function getName()
     {
         return $this->name;
     }
+
     public function getType()
     {
         return $this->type;
     }
+
     public abstract function saveProduct($data);
     public abstract function getAllProducts();
     public abstract function getSpecifications($row);
+    
     public function deleteProducts($sku)
     {
         $conn = $this->connect();
@@ -66,6 +73,5 @@ require_once './autoloader.php';
         mysqli_free_result($result);
         return 1;
         } else return 0;
-
     }
 }

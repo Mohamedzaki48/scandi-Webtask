@@ -9,8 +9,8 @@ class Controller
 {
     public function getProducts () 
     {
-      $res = new Helper();
-      $result = $res -> retProducts ();
+      $helper = new Helper();
+      $result = $helper -> retProducts ();
     
       return $result;
     }

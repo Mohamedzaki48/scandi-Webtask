@@ -55,11 +55,10 @@ class Book extends Product
         $result = $stmt->get_result(); 
         
         return $result;
-     }
+    }
 
      public function getSpecifications($row)
-     {
+    {
         return 'Weight:'." " .$row["weight"]." "."KG";
-        
-     }
+    }
 }

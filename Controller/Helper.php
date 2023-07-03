@@ -11,17 +11,17 @@ class Helper
 
    public function checkType($type)
    {
-      $lol = $this->types[$type];
-      $val = "application\Model\\$lol";
+      $mod = $this->types[$type];
+      $obj = "application\Model\\$mod";
       
-      return new $val();
+      return new $obj();
    }
 
    public function retProducts()
    {
       foreach ($this->types as $key => $value) {
-         $lo = "application\Model\\$value";
-         $obj =  new $lo();
+         $mod = "application\Model\\$value";
+         $obj =  new $mod();
          $result = $obj->getAllProducts();
          array_push($this->ret, $result);
        }
