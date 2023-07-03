@@ -2,44 +2,39 @@
 namespace application\Controller;
 use application\Model as Model;
 require_once './autoloader.php';
+ini_set('display_errors',1); 
+error_reporting(E_ALL);
 
-
-  ini_set('display_errors',1); 
- error_reporting(E_ALL);
-class Controller{
-
-
- 
-public function getProducts(){
-  $res = new Helper();
-  $result = $res->retProducts();
-  return $result;
-
-}
-
-
-public function saveProduct($data){
-   $controlhelp = new Helper();
-   $mod = $controlhelp->checkType($data["type"]);
-   $ret = $mod->saveProduct($data);
-  
-
-    if($ret === 1){
-   return true;
-  }else{ return false;}
-
-}
-
-public function deleteProducts($data){
-  $prod = new Model\Book();
-  for($i=0;$i<count($data);$i++){
-    $prod->setSku($data[$i]);
-    $prod->deleteProducts($prod->getSku());
+class Controller
+{
+    public function getProducts () 
+    {
+      $helper = new Helper();
+      $result = $helper -> retProducts ();
     
-}
-return 1;
-}
+      return $result;
+    }
 
-    
+    public function saveProduct ($data)
+    {
+      $controlhelp = new Helper();
+      $mod = $controlhelp->checkType($data["type"]);
+      $checksave = $mod->saveProduct($data);
+      if($checksave === 1){
+        return true;
+      }
+      else{
+        return false;
+      }
+    }
 
+    public function deleteProducts($data)
+    {
+      $prod = new Model\Book();
+      for($i=0;$i<count($data);$i++){
+        $prod->setSku($data[$i]);
+        $prod->deleteProducts($prod->getSku());
+      }
+      return 1;
+    }
 }

@@ -2,17 +2,14 @@
 import * as helper from "./helpers.js";
 
 //Requiring All needed HTML elements
-const selectedType = document.querySelector("#producttype");
 const bookweightbox = document.querySelector(".weightbox");
 const furniturebox = document.querySelector(".dimensionsbox");
 const discbox = document.querySelector(".sizebox");
-const allboxes = document.querySelector(".boxes");
 const select = document.getElementById("productType");
 const adding = document.getElementById("product_form");
 const sku = document.getElementById("sku");
 const name = document.getElementById("name");
 const price = document.getElementById("price");
-const type = document.getElementById("type");
 const size = document.getElementById("size");
 const weight = document.getElementById("weight");
 const height = document.getElementById("height");
@@ -37,7 +34,6 @@ select.addEventListener("change", function () {
     weight.value = "";
     bookweightbox.style.display = "none";
     discbox.style.display = "none";
-
     furniturebox.style.display = "block";
     furniturebox.style.position = "absolute";
   }
@@ -88,7 +84,6 @@ adding.addEventListener("submit", function (e) {
       return;
     }
   }
-
   if (myvalue === "DVD") {
     if (helper.isNumber(size.value)) spec.push(size.value);
     else {
